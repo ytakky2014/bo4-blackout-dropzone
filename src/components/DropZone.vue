@@ -1,19 +1,32 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <div class="center">
-      <img src="@/assets/bomap.png" width="1024" height="500"/>
-    </div>
-    <div class="text-center">
-      <v-btn x-large dark @click="generate">Button</v-btn>
-    </div>
-    <h2>{{ drop_zone }}</h2>
-  </div>
+  <v-app>
+    <v-container text-xs-center>
+      <div class="hello">
+        <h1>{{ msg }}</h1>
+        <v-card
+          max-width="800"
+          max-height="600"
+          class="mx-auto"
+        >
+          <v-col class="shirnk">
+            <v-img
+              v-bind:src="require('@/assets/bomap.png')">
+            </v-img>
+          </v-col>
+          <v-col class="text-center">
+            <v-btn x-large dark @click="generate">Button</v-btn>
+          </v-col>
+          <v-col class="text-center">
+            <h2>{{ drop_zone }}</h2>
+          </v-col>
+        </v-card>
+      </div>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
 export default {
-  name: 'BlackOut Drop Zone Generate',
   data () {
     return {
       msg: 'BlackOut Drop Zone Generate',
