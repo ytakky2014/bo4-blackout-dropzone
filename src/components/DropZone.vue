@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     generate () {
-      const c = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+      const c = ['B', 'C', 'D', 'E', 'E', 'F', 'G', 'H']
       var tx = Math.floor(Math.random() * 8)
       var y = Math.floor(Math.random() * 8 + 1)
       var dz = c[tx] + y
